@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | Home</title>
+      <link rel="stylesheet" href="frontpage.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+          
+         </div>
+         <div class="form-container">
+            
+            <div class="form-inner" id="message">
+               <form  class="login" id="signInForm" formaction="4c.html">
+                  <div class="field">
+                     <input type="text" placeholder="Username" id="Username" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password"  id="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="passwordreset.html">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                   
+                     <input type="submit" value="login" >
+                
+                  </div>
+                 
+                 
+               </form>
+             
+            </div>
+         </div>
+      </div>
+      <script>
+          const signInForm = document.getElementById("signInForm");
+
+signInForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+   
+    const username = signInForm.Username.value;
+    const password = signInForm.Password.value;
+
+    if (username === "nehalgarg23" && password === "12345") {
+        alert("Sign-in successful!");
+        window.location.href = "studentred.html";
+    } else {
+        alert("Invalid username or password. Please try again.");
+    }
+    loginLink.addEventListener("submit", function () {
+            var uid = document.querySelector(".Username").value;
+            var pass = document.querySelector(".Password").value;
+            localStorage.setItem(Username, Password);
+            loginForm.style.display = "flex";
+            registrationForm.style.display = "none";
+        });
+});
+      </script>
+   </body>
+</html>
